@@ -2,12 +2,21 @@ $.jCarouselLite = {
     version: '1.2.0-alpha'
 };
 
+/**
+ * 请勿替换此插件，因为修改了源代码，使其符合学科网首页的要求。
+ * 1.添加了省级联动选择器的选项，使点击省份的时候可以联动下面的图片一起滚动
+ * 2.暴露出一些有用的状态：滚动状态
+ * 3.暴露出可操作的方法：暂停方法、开始滚动方法
+ * by zuokangsheng
+ */
+
 $.fn.jCarouselLite = function(options) {
 
     options = $.extend({}, $.fn.jCarouselLite.options, options || {});
 
-    return this.each(function() { // Returns the element collection. Chainable.
-
+    //返回所有的API集合
+    var self = [];
+    this.each(function() { // Returns the element collection. Chainable.
         var running,
             animCss, sizeCss,
             div = $(this),
@@ -179,7 +188,24 @@ $.fn.jCarouselLite = function(options) {
 
             if (options.btnNext) {
                 $(options.btnNext).click(function() {
+                    //在这里添加往后翻页的事件
                     return go(calculatedTo + options.scroll);
+                });
+            }
+
+            /**
+             * 省级联动，学科网首页-->名校资源选项卡的省级联动
+             * @param  {[type]} options.provinceMap [description]
+             * @return {[type]}                     [description]
+             * @author zuokangsheng
+             */
+
+            if (options.provinceMap) {
+                $('.' + options.provinceMap.parentClass).click(function() {
+                    //获取点击省份
+                    var thisIndex = $(this).index();
+                    var currentIndex = $('.' + options.provinceMap.parentClass + '.' + options.provinceMap.childClass).index();
+                    return thisIndex !== currentIndex && go(calculatedTo + options.scroll - 1 + thisIndex - currentIndex);
                 });
             }
 
@@ -203,16 +229,16 @@ $.fn.jCarouselLite = function(options) {
                 setupAutoScroll();
                 if (options.onMouse) {
                     /*ul.bind("mouseover", function() {
-									if(options.auto) {
-										clearTimeout(autoTimeout);
-									}
-								});
-								//mouseout
-								ul.bind("mouseout", function() {
-									if(options.auto) {
-										setupAutoScroll();
-									}
-								});*/
+                                    if(options.auto) {
+                                        clearTimeout(autoTimeout);
+                                    }
+                                });
+                                //mouseout
+                                ul.bind("mouseout", function() {
+                                    if(options.auto) {
+                                        setupAutoScroll();
+                                    }
+                                });*/
                     paused = false;
                     ul.hover(function() {
                         if (options.auto && !paused) {
@@ -228,6 +254,16 @@ $.fn.jCarouselLite = function(options) {
                 }
 
             }
+        }
+
+        function pause() {
+            clearTimeout(autoTimeout);
+            paused = true;
+        }
+
+        function play() {
+            setupAutoScroll();
+            paused = false;
         }
 
         /**
@@ -294,10 +330,10 @@ $.fn.jCarouselLite = function(options) {
                 calculatedTo = itemLength - numVisible;
             }
 
-            console.log("Item Length: " + itemLength + "; " +
-                "To: " + to + "; " +
-                "CalculatedTo: " + calculatedTo + "; " +
-                "Num Visible: " + numVisible);
+            // console.log("Item Length: " + itemLength + "; " +
+            //     "To: " + to + "; " +
+            //     "CalculatedTo: " + calculatedTo + "; " +
+            //     "Num Visible: " + numVisible);
         }
 
         /**
@@ -354,7 +390,22 @@ $.fn.jCarouselLite = function(options) {
                 }, animationOptions)
             );
         }
+
+        function isRunning(){
+            return running;
+        }
+
+        /**
+         * 将需要操作的方法返回出去
+         * @type {[type]}
+         */
+        self.push({
+            pause:pause,
+            play:play,
+            isRunning:isRunning
+        });
     });
+    return self;
 };
 
 $.fn.jCarouselLite.options = {
@@ -378,5 +429,6 @@ $.fn.jCarouselLite.options = {
     highlightClass: "highlight", // Class for highlighting GO buttons when the corresponding item is displayed
 
     beforeStart: null, // Set to a function to receive a callback before every scroll start
-    afterEnd: null // Set to a function to receive a callback after every scroll end
+    afterEnd: null, // Set to a function to receive a callback after every scroll end
+    provinceMap: false //省级联动参数选项
 };

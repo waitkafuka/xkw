@@ -3,7 +3,8 @@
  */
 .card.wrapper {
     background-color: #fff;
-    padding-top: 20px;
+    padding-top: 24px;
+    padding-bottom: 30px;
     margin-top: 20px
 }
 .wrapper {
@@ -15,11 +16,11 @@
 .title-tips {
     height: 40px;
     margin: 0 0 15px;
-    line-height: 40px;
-    border-left: 2px solid #0d75d9;
+    // line-height: 40px;
+    border-left: 3px solid #0d75d9;
     font-size: 22px;
     color: #057ee1;
-    padding-left: 25px
+    padding-left: 20px
 }
 .change-tab,.province,.subject-type,.month-type {
     top: 17px;
@@ -61,10 +62,6 @@
     background-repeat: no-repeat
 }
 
-
-.jxzj-list {
-    padding-bottom: 36px
-}
 
 .jxzj-list li {
     width: 335px;
@@ -130,7 +127,6 @@
 }
 
 .zixun-box {
-    padding-bottom: 16px;
     *float: left
 }
 
@@ -1234,7 +1230,8 @@ li.empty:hover {
     line-height: 36px;
     display: inline-block;
     float: right;
-    vertical-align: middle
+    vertical-align: middle;
+    font-size: 12px;
 }
 
 .zixun-list {
@@ -2140,4 +2137,558 @@ li.empty:hover {
     text-align: left;
     font-weight: bold;
     margin-left: 6px
+}
+
+[class^=icon-] {
+    background-image: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/icon_bg.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.icon-down {
+    background-position: 0 -150px;
+    width: 12px;
+    height: 6px
+}
+
+.header {
+    height: 29px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f2f2f2
+}
+
+.header .wrapper {
+    *z-index: 100
+}
+
+.header .logo {
+    float: left;
+    height: 30px;
+    width: 220px;
+    display: block;
+    background-image: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/header-logo.png");
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.header .header-right {
+    float: right;
+    color: #666;
+    font-size: 12px;
+    line-height: 30px;
+    width: 500px;
+    text-align: right;
+    padding-right: 70px;
+    position: relative;
+    z-index: 501
+}
+
+.header .header-right a {
+    color: #666;
+    margin-left: 2px;
+    line-height: 30px
+}
+
+.header .header-right a.bind-btn {
+    color: #fc8200
+}
+
+.header .header-right a.login-btn {
+    color: #fff;
+    background-color: #ff9a18;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 5px 0 12px
+}
+
+.header .header-right a.reg-btn {
+    color: #333
+}
+
+.header .header-right a.login-btn:hover {
+    background-color: #f18801
+}
+
+.header .header-right a.logout-btn {
+    color: #fc8200
+}
+
+.header .header-right a.user-btn {
+    color: #fc8200
+}
+
+.header .header-right a.user-btn:hover {
+    text-decoration: underline
+}
+
+.header .header-right b {
+    color: #ccc;
+    margin: 0 5px
+}
+
+.header .header-right .map {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    float: right
+}
+
+.header .header-right .map .title {
+    cursor: pointer
+}
+
+.header .header-right .map .title .icon-down {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms
+}
+
+.header .header-right .map .title:hover .icon-down {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg)
+}
+
+.header .header-right .map .title:hover .list {
+    display: block
+}
+
+.header .header-right .map .list-box {
+    display: none;
+    position: absolute;
+    width: 1200px;
+    right: 0;
+    top: 29px;
+    z-index: 1000;
+    box-shadow: 0 2px 6.51px .49px rgba(9,2,4,0.3)
+}
+
+.header .header-right .map .list-box .sanjiao {
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    display: block;
+    width: 24px;
+    height: 10px;
+    background-image: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/box_sanjiao.png");
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.header .header-right .map .list {
+    border: 1px solid #1e8cf5;
+    background-color: #fff;
+    padding: 18px
+}
+
+.header .header-right .map .list>li {
+    float: left;
+    padding: 0 15px
+}
+
+.header .header-right .map .list .line {
+    padding: 0;
+    width: 1px;
+    height: 250px;
+    margin-top: 40px;
+    background-color: #e7e7e7;
+    margin-right: 10px
+}
+
+.header .header-right .map .list .subtitle {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    text-align: left
+}
+
+.header .header-right .map .list .item li {
+    width: 90px;
+    float: left
+}
+
+.header .header-right .map .list .item a {
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    display: block;
+    text-align: left
+}
+
+.header .header-right .map .list .item a:hover {
+    color: #057ee1
+}
+
+.header .header-right .map:hover .list-box {
+    display: block
+}
+.zyl_list {
+    position: absolute;
+    display: none;
+    top: 35px;
+    right: -1px;
+    padding: 0;
+    width: 380px;
+    line-height: 20px;
+    border: 1px solid #188eee;
+    background-color: #fff;
+    height: auto !important;
+}
+
+.zyl_list ul {
+    margin: 10px 15px;
+    max-height: 192px;
+    overflow: auto
+}
+
+.zyl_list ul li {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 0 5px;
+    border-bottom: 1px dashed #eee
+}
+
+.zyl_list ul li a {
+    display: inline-block;
+    height: 26px;
+    padding-left: 5px;
+    width: 175px;
+    float: left;
+    color: #333;
+    margin: 0;
+    overflow: hidden
+}
+
+.zyl_list ul li span {
+    background: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/icon.png") no-repeat scroll 0 -891px;
+    cursor: pointer;
+    padding-left: 15px;
+    float: right;
+    display: inline-block;
+    padding-right: 5px;
+    color: #666
+}
+
+.zyl_list ul li i {
+    color: red;
+    float: right;
+    font-style: normal;
+    padding-right: 10px
+}
+
+.zyl_list .zyl_btn {
+    background-color: #f5f5f5;
+    padding: 8px 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px
+}
+
+.zyl_list .zyl_btn .all {
+    float: left;
+    padding-left: 15px;
+    color: #676767
+}
+
+.zyl_list .zyl_btn input {
+    width: 70px;
+    height: 30px;
+    float: right;
+    display: inline-block;
+    text-align: center;
+    color: #333;
+    border: 0;
+    margin-right: 15px;
+    cursor: pointer
+}
+.panel {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    margin-left: 615px;
+    z-index: 100;
+    width: 45px
+}
+
+.panel li {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    background-color: #d4d4d4;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    cursor: pointer
+}
+
+.panel li i {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/up_bg.png") no-repeat
+}
+
+.panel li .tip {
+    display: none;
+    color: #fff;
+    font-size: 14px
+}
+
+.panel li .qq-box {
+    display: none;
+    position: absolute;
+    top: -40px;
+    right: 60px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #666;
+    width: 87px
+}
+
+.panel li .account-box {
+    position: absolute;
+    right: 45px;
+    top: 0;
+    display: none;
+    width: 260px;
+    height: 184px;
+    border: 1px solid #dbdbdb;
+    border-right: 0;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px
+}
+
+.panel li .account-box:before {
+    position: absolute;
+    right: -5px;
+    top: 16px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #fff;
+    border-bottom: 5px solid transparent
+}
+
+.panel li .account-box .before-login {
+    line-height: 184px
+}
+
+.panel li .account-box .before-login a {
+    color: #057ee1
+}
+
+.panel li .account-box .after-login {
+    line-height: 33px;
+    text-align: left;
+    padding: 10px
+}
+
+.panel li .account-box .after-login a {
+    color: #333;
+    margin: 0 3px
+}
+
+.panel li .account-box .after-login a:hover {
+    text-decoration: underline
+}
+
+.panel li .account-box .after-login .label {
+    max-width: 130px;
+    display: inline-block;
+    overflow: hidden
+}
+
+.panel li .account-box .after-login .blue {
+    color: #057ee1
+}
+
+.panel li .account-box .after-login .username {
+    color: #333;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.panel li .account-box .after-login .username .userid {
+    color: #666;
+    font-weight: normal
+}
+
+.panel li .account-box .after-login .value {
+    color: #fe0000
+}
+
+.panel li .account-box .after-login .quit:hover {
+    color: #fe0000;
+    text-decoration: underline
+}
+
+.panel li:hover {
+    background-color: #ff9a18
+}
+
+.panel li:hover i {
+    display: none
+}
+
+.panel li:hover .tip {
+    display: block;
+    font-size: 12px
+}
+
+.panel li.account {
+    position: relative
+}
+
+.panel li.account i {
+    background-position: 8px 8px
+}
+
+.panel li.account:hover i {
+    display: block
+}
+
+.panel li.account:hover .account-box {
+    display: block
+}
+
+.panel li.wrong i {
+    background-position: 8px -42px
+}
+
+.panel li.qq i {
+    background-position: 8px -92px
+}
+
+.panel li.gotop i {
+    background-position: 8px -142px
+}
+
+.panel li.gotop:hover i {
+    display: block
+}
+
+.panel li.wrong i {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAYAAABvCO8sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMTI5MjI5NTBERTUxMUU3OEFEREY5OUExNDI4OTc5RSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyMTI5MjI5NjBERTUxMUU3OEFEREY5OUExNDI4OTc5RSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIxMjkyMjkzMERFNTExRTc4QURERjk5QTE0Mjg5NzlFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIxMjkyMjk0MERFNTExRTc4QURERjk5QTE0Mjg5NzlFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rpbXhwAAAnpJREFUeNq0lj1oFEEUxzfnETAElJPgF2ghEgULRWMhBouI4FlEFDWKNgpiIYJCULQTYiVqkcZCECLBIorFaREUSUCCEaNEMGpAI2gsYhCMesSPW38T/4PD3d7e7rk++DG3M7P73pt777/r+b5fAwfhnZ+8dUA9eBbjbL/neV0wBQ+85Gw5LIOrcASmZ2Zx+Ao+w2Y3kgRYCi+V6Xo7n1Iko3DXS9be6uSMNdjJlMYa7/9YWqMf5nA+XIAmXZ+CbVU6nFXsMB2wqRmOQxYegSmqe3A7yZRd64VOOAqNMAantWayvlHhmf0KMrJDU7555/onfHH2z63gsD5uhub/aoc3MAytcF5HPBDBoR/X4UO4opLugw546qwXYvxlNrjZf8P5Y08SbnrLbuiG1a60+cpgjRNZHexRhEbuBitkslLVXatWy6uqx0sPvDTDBrjuCPBHaAnJ4iS8DxDuZ3C4eH+Qw0OauwnH9HtYa406IkMX3NF6Ac7CTtgBlxzH56A2zOEZzdnoxiXu5veWgEz6YW1A5hvhufZsD3O4CSZgEl4r+k6t1cEqaIOvkId1IcedhWk9Z3E5hykdzSh8g8uQKXrQLvilF2ylSu2WjyZzHdSHBclXTqL+PaD3FqgaByP04geN88o1vitx5SwVRVUcaSy5Ma5NacxG2LtC48S/KM0S56OrOWSfKa4fMGDrwDocqkK2DujeF7A1YH2vWsrYhrC2iEpaTW3tmhr+IvQU9WoO5liHQyr/tioF2ijLSIAg9EkSc45AZIx4m/fdLVXlSMziOQH3YSEsgowq95O+FCb1AuiBlplPFUXZCo+r+LLeF/EUzHH2wthvAQYAgj4TO4iwyE4AAAAASUVORK5CYII=");
+    background-position: center center;
+    background-repeat: no-repeat
+}
+.panel li.vedio i {
+    background-image: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/panel_vedio.png");
+    background-position: center center
+}
+
+.panel li.vedio:hover .tip {
+    padding: 8px 5px;
+    line-height: 14px
+}
+.change-box .box {
+    position: relative;
+    float: left;
+    margin-right: 24px
+}
+
+.change-box .box:hover .pop-box {
+    display: block
+}
+
+.change-box .btn {
+    color: #999;
+    cursor: pointer
+}
+
+.change-box .pop-box {
+    position: absolute;
+    display: none;
+    width: 255px;
+    border: 1px solid #1e8cf5;
+    background-color: #fff;
+    z-index: 100;
+    right: -16px;
+    top: 27px;
+    text-align: center;
+    box-shadow: 0 2px 6.51px .49px rgba(9,2,4,0.3);
+    text-align: left
+}
+
+.change-box .pop-box.zl-type {
+    width: 225px
+}
+
+.change-box .pop-box.zl-type .list {
+    padding: 12px 0 12px 15px
+}
+
+.change-box .pop-box.zl-type .list li {
+    width: 100px;
+    text-align: left
+}
+
+.change-box .pop-box .sanjiao {
+    position: absolute;
+    top: -9px;
+    right: 35px;
+    display: block;
+    width: 24px;
+    height: 10px;
+    background-image: url("http://zxxkstatic.zxxk.com/zxxk/skins/index/images/box_sanjiao.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1
+}
+
+.change-box .pop-box .list {
+    padding: 12px 14px
+}
+
+.change-box .pop-box .list li {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    width: 45px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #333;
+    font-size: 14px
+}
+
+.change-box .pop-box .list li:hover,.change-box .pop-box .list li.active {
+    color: #057ee1
+}
+
+.change-tab,.province,.subject-type,.month-type {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    height: 46px;
+    top: 17px
+}
+.no_res {
+    background: url("http://zxxkstatic.xkw.com/images/icon5.png") no-repeat 10px 10px;
+    padding: 10px 0 10px 65px;
+    color: #676767;
+    line-height: 60px;
+    height: 60px
 }
