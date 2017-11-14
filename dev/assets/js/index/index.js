@@ -138,7 +138,7 @@ var xkwIndex = {
         xkwIndex.mxzySwiper = $(".mxzy-swiper").jCarouselLite({
             btnNext: ".mxzy-next-btn",
             btnPrev: ".mxzy-prev-btn",
-            auto: 3000,
+            // auto: 3000,
             // scroll: 3,
             visible: 3,
             speed: 1000,
@@ -154,6 +154,7 @@ var xkwIndex = {
                 $('.' + pId).addClass('current');
             }
         });
+        $('.mxzy-swiper-container').width(1160);
     },
     /**
      * 名校资料卡片悬停效果
